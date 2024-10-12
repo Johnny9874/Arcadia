@@ -1,0 +1,12 @@
+h1 {
+    margin: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;    /* Centre verticalement */
+}
+
+img {
+    width: 100px; /* Largeur de l'image */
+    height: auto;  /* Hauteur automatique pour garder les proportions */
+}
