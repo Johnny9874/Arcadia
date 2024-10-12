@@ -32,9 +32,9 @@ body {
 .menuderoulant li a:link, .menuderoulant li a:visited {
     display: block;
     color: #FFFFFF;
-    background: #e9e9e9;
+    background: #853333;
     padding: 6px 10px;
-    border-right: 1px solid #FFFFFF;
+    border-right: 1px solid #853333;
     text-align: center;
     text-decoration: none;
 }
@@ -71,5 +71,40 @@ body {
 
 .menuderoulant li:hover .sousmenu {
     display: block;
-
 }
+
+.conteudo {
+    width: 450px;
+}
+
+.carrousel {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.carrousel::webkit - ::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    scroll-snap-align: start;
+    border-radius: 30px;
+    min-height: 200px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redimenssionner {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
