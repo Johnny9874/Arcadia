@@ -10,3 +10,66 @@ img {
     width: 100px; /* Largeur de l'image */
     height: auto;  /* Hauteur automatique pour garder les proportions */
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 12px Arial;
+}
+
+.menuderoulant {
+    height: 40px;
+    list-style: none;
+    padding: 10px;
+    margin: -8px;
+}
+
+.menuderoulant li {
+    float: left;
+    width: 380px;
+}
+
+.menuderoulant li a:link, .menuderoulant li a:visited {
+    display: block;
+    color: #FFFFFF;
+    background: #e9e9e9;
+    padding: 6px 10px;
+    border-right: 1px solid #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menuderoulant li a:hover {background-color: #199BD2;}
+.menuderoulant li a:active {background-color: #853333 ;}
+
+.menuderoulant .sousmenu{
+    list-style-type: none;
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.menuderoulant .sousmenu li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.menuderoulant .sousmenu li a:link, .menuderoulant li a:visited {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #582900;
+}
+
+.menuderoulant .sousmenu li a:hover {
+    background-color: #199BD2;
+}
+
+.menuderoulant li:hover .sousmenu {
+    display: block;
+
+}
