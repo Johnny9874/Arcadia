@@ -1,3 +1,8 @@
+/* Import google fonts- inter */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+
 h1 {
     margin: 0;
     height: 100px;
@@ -58,5 +63,7 @@ body {
     border-right: 1px solid transparent;
 }
 
-
+.card-game {
+    flex-box: 1;
+}
 
