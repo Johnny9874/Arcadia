@@ -58,53 +58,5 @@ body {
     border-right: 1px solid transparent;
 }
 
-.menuderoulant .sousmenu li a:link, .menuderoulant li a:visited {
-    display: block;
-    color: #FFFFFF;
-    text-decoration: none;
-    background-color: #582900;
-}
 
-.menuderoulant .sousmenu li a:hover {
-    background-color: #199BD2;
-}
-
-.menuderoulant li:hover .sousmenu {
-    display: block;
-}
-
-.conteudo {
-    width: 1000px;
-}
-
-.carrousel {
-    display: grid;
-    grid-auto-flow: column;
-    scroll-behavior: auto;
-    gap: 1.2rem;
-    overflow-y: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-}
-
-.carrousel::webkit - ::-webkit-scrollbar {
-    display: none;
-}
-
-.card {
-    scroll-snap-align: start;
-    border-radius: 30px;
-    min-height: 200px;
-    min-width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.redimenssionner {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-}
 
