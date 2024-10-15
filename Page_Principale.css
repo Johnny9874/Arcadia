@@ -68,7 +68,55 @@ body {
     flex-box: 1;
 }
 
+<<<<<<< HEAD
+.menuderoulant .sousmenu li a:hover {
+    background-color: #199BD2;
+}
+
 .menuderoulant li:hover .sousmenu {
     display: block;
 
 }
+
+.carousel-container {
+    position: relative;
+    width: 100%; /* Utiliser 100% pour garantir que ça s'ajuste à la largeur de l'écran */
+    overflow: hidden;
+    height: 400px;
+    z-index: 1;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 400%; /* Si vous avez 3 images, utilisez 100% * 3 */
+}
+
+.carousel-slide img {
+    width: 100%; /* Chaque image prend la largeur de l'élément parent */
+    height: 400px; /* Conserve le ratio d'aspect */
+    object-fit: contain; /* Permet de couvrir l'espace sans déformation */
+    max-height: 100%;
+}
+
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+=======
+>>>>>>> 31ed1f4274406a2c548a8a2c5f1a14fb9064dfec
