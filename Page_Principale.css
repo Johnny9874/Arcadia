@@ -1,3 +1,8 @@
+/* Import google fonts- inter */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+
 h1 {
     margin: 0;
     height: 100px;
@@ -32,9 +37,9 @@ body {
 .menuderoulant li a:link, .menuderoulant li a:visited {
     display: block;
     color: #FFFFFF;
-    background: #e9e9e9;
+    background: #853333;
     padding: 6px 10px;
-    border-right: 1px solid #FFFFFF;
+    border-right: 1px solid #853333;
     text-align: center;
     text-decoration: none;
 }
@@ -59,59 +64,11 @@ body {
     border-right: 1px solid transparent;
 }
 
-.menuderoulant .sousmenu li a:link, .menuderoulant li a:visited {
-    display: block;
-    color: #FFFFFF;
-    text-decoration: none;
-    background-color: #582900;
-}
-
-.menuderoulant .sousmenu li a:hover {
-    background-color: #199BD2;
+.card-game {
+    flex-box: 1;
 }
 
 .menuderoulant li:hover .sousmenu {
     display: block;
 
-}
-
-.carousel-container {
-    position: relative;
-    width: 100%; /* Utiliser 100% pour garantir que ça s'ajuste à la largeur de l'écran */
-    overflow: hidden;
-    height: 400px;
-    z-index: 1;
-}
-
-.carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 400%; /* Si vous avez 3 images, utilisez 100% * 3 */
-}
-
-.carousel-slide img {
-    width: 100%; /* Chaque image prend la largeur de l'élément parent */
-    height: 400px; /* Conserve le ratio d'aspect */
-    object-fit: contain; /* Permet de couvrir l'espace sans déformation */
-    max-height: 100%;
-}
-
-
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
 }
