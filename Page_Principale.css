@@ -118,3 +118,17 @@ button {
 .next {
     right: 10px;
 }
+
+.Card-container {
+    display: flex;               /* Utiliser Flexbox */
+    justify-content: center;      /* Centrer les images horizontalement */
+    align-items: center;          /* Centrer les images verticalement (si nécessaire) */
+    gap: 1px;                    /* Espacement entre les images (optionnel) */
+} 
+
+.Image {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    max-width: 100%;
+}
