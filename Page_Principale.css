@@ -23,61 +23,45 @@ body {
     background-color:burlywood;
 }
 
-.menuderoulant {
-    height: 40px;
+.header {
+    display: flex;
+    background-color: #7f9172;
+    font-weight: bold;
+}
+
+.menu {
     list-style: none;
-    padding: 10px;
-    margin: -8px;
+    display: flex;
 }
 
-.menuderoulant li {
-    float: left;
-    width: 379px;
+.menu li { 
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    width: 30px;
+    padding: 30px;
 }
 
-.menuderoulant li a:link, .menuderoulant li a:visited {
-    display: block;
-    color: #FFFFFF;
-    background: #853333;
-    padding: 6px 10px;
-    border-right: 1px solid #853333;
-    text-align: center;
+.menu li a:link, .menu li a:visited {
+    color: #FFFFFF; 
     text-decoration: none;
+    font-size: 15px;
+    margin-left: 20px;
 }
 
-.menuderoulant li a:hover {background-color: #199BD2;}
-.menuderoulant li a:active {background-color: #853333 ;}
-
-.menuderoulant .sousmenu{
-    list-style-type: none;
-    display: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    z-index: 10;
-}
-
-.menuderoulant .sousmenu li {
-    float: none;
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid transparent;
-    border-right: 1px solid transparent;
+.Connexion {
+   background-color: rgb(197, 122, 24); 
+   color: black; 
+   font-weight: bold; 
+   border-radius: 30px; 
+   font-size: 15px;
+   margin-left: 10px;
 }
 
 .card-game {
     flex-box: 1;
 }
 
-
-.menuderoulant .sousmenu li a:hover {
-    background-color: #199BD2;
-}
-
-.menuderoulant li:hover .sousmenu {
-    display: block;
-
-}
 
 .carousel-container {
     position: relative;
