@@ -20,6 +20,7 @@ body {
     margin: 0;
     padding: 0;
     font: 12px Arial;
+    background-color:burlywood;
 }
 
 .menuderoulant {
@@ -31,7 +32,7 @@ body {
 
 .menuderoulant li {
     float: left;
-    width: 380px;
+    width: 379px;
 }
 
 .menuderoulant li a:link, .menuderoulant li a:visited {
@@ -123,12 +124,31 @@ button {
     display: flex;               /* Utiliser Flexbox */
     justify-content: center;      /* Centrer les images horizontalement */
     align-items: center;          /* Centrer les images verticalement (si nécessaire) */
-    gap: 1px;                    /* Espacement entre les images (optionnel) */
+    gap: 200px;                    /* Espacement entre les images (optionnel) */
 } 
 
 .Image {
     width: 100px;
     height: 100px;
     margin-top: 20px;
-    max-width: 100%;
+}
+
+.card-1 {
+width: 200px;
+}
+
+.card-2 {
+    width: 200px;
+}
+
+.card-3 {
+    width: 200px;
+}
+
+.propos {
+    margin-top: 500px;
+}
+
+.propos p {
+    text-align: center;
 }
