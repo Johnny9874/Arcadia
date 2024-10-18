@@ -20,7 +20,6 @@ body {
     margin: 0;
     padding: 0;
     font: 12px Arial;
-    background-color:burlywood;
 }
 
 .header {
@@ -44,9 +43,85 @@ body {
     margin-left: 20px;
 }
 
-.Connexion {
-    display: flex;
-    
+.Image_Accueil0 {
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+.Image_Accueil0  img{
+    width: 100%;
+    height: 450px;
+}
+
+.Bienvenu {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.Arcadia {
+    position: absolute;
+    top: 85px;
+    left: 186px;
+    font-size: 30px;
+    color: #e08e23;
+    font-weight: bold;
+}
+
+.texte_bienvenu {
+    position: absolute;
+    top: 145px;
+    left: 186px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Container {
+    width: 100%;
+    height: 250px;
+}
+
+.Découvrez {
+    position: absolute;
+    left: 750px;
+    font-weight: bold;
+    font-size: 30px;
+    bottom: 300px;
+}
+
+.HABITAT {
+    position: absolute;
+    left: 970px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #e08e23;
+    bottom: 300px;
+}
+
+.Text {
+    position: absolute;
+    font-size: 18px;
+    font-family: system-ui;
+    font-weight: bold;
+    bottom: 230px;
+    left: 480px;
+}
+
+.Découvrez_nos_habitats button{
+    position: absolute;
+    left: 850px;
+    top: 750px;
+    background-color: #e08e23;
+    font-size: 15px;
+    height: 30px;
+    width: 200px;
+    font-weight: bold;
+    border-radius: -20px;
 }
 
 .card-game {

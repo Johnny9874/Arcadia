@@ -13,3 +13,4 @@ function moveSlide(direction) {
     // Appliquer la translation
     slides.style.transform = 'translateX(' + offset + '%)';
 }
+
