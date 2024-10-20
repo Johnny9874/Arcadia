@@ -86,6 +86,163 @@ body {
     height: 250px;
 }
 
+.contenaire {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1600px;
+    margin: 0 auto;
+    border: 1px solid #ddd
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    margin-left: 20px;
+    max-width: 450px;
+}
+
+.text-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.text-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff8c00;
+}
+
+.contenaire-1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1600px;
+    margin: 0 auto;
+    border: 1px solid #ddd
+}
+
+.image-container-1 img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-container-1 {
+    margin-left: 20px;
+    max-width: 450px;
+}
+
+.text-container-1 h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.text-container-1 p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff8c00;
+}
+
+.contenaire-2 {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1600px;
+    margin: 0 auto;
+    border: 1px solid #ddd
+}
+
+.image-container-2 img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-container-2 {
+    margin-left: 20px;
+    max-width: 450px;
+}
+
+.text-container-2 h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.text-container-2 p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff8c00;
+}
+
 .Découvrez {
     position: absolute;
     left: 750px;
@@ -128,71 +285,26 @@ body {
     flex-box: 1;
 }
 
-
-.carousel-container {
-    position: relative;
-    width: 100%; /* Utiliser 100% pour garantir que ça s'ajuste à la largeur de l'écran */
-    overflow: hidden;
-    height: 400px;
-    z-index: 1;
-}
-
-.carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 400%; /* Si vous avez 3 images, utilisez 100% * 3 */
-}
-
-.carousel-slide img {
-    width: 100%; /* Chaque image prend la largeur de l'élément parent */
-    height: 400px; /* Conserve le ratio d'aspect */
-    object-fit: contain; /* Permet de couvrir l'espace sans déformation */
-    max-height: 100%;
-}
-
-
-button {
+.container-animaux {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 10;
+    height: 900px;
+    width: 100%;
+    background-color: #074874;
 }
 
-.prev {
-    left: 10px;
+.container-animaux h2 {
+    position: relative;
+    left: 800px;
+    font-size: 25px;
+    color: #FFFFFF;
 }
 
-.next {
-    right: 10px;
-}
-
-.Card-container {
-    display: flex;               /* Utiliser Flexbox */
-    justify-content: center;      /* Centrer les images horizontalement */
-    align-items: center;          /* Centrer les images verticalement (si nécessaire) */
-    gap: 200px;                    /* Espacement entre les images (optionnel) */
-} 
-
-.Image {
-    width: 100px;
-    height: 100px;
-    margin-top: 20px;
-}
-
-.card-1 {
-width: 200px;
-}
-
-.card-2 {
-    width: 200px;
-}
-
-.card-3 {
-    width: 200px;
+.card-1 img {
+    position: relative;
+    border:  double #fafafa;
+    border-radius: 50%;
+    width: 300px;
+    height: auto;
 }
 
 .propos {
