@@ -281,30 +281,76 @@ body {
     border-radius: -20px;
 }
 
-.card-game {
-    flex-box: 1;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Conteneur général pour les animaux */
 .container-animaux {
-    position: absolute;
-    height: 900px;
-    width: 100%;
     background-color: #074874;
+    width: 100%;
+    padding: 50px 0; /* Ajouter du padding pour espacer un peu le contenu */
+    text-align: center;
 }
 
+/* Style du titre des animaux */
 .container-animaux h2 {
-    position: relative;
-    left: 800px;
     font-size: 25px;
     color: #FFFFFF;
+    margin-bottom: 50px;
 }
 
-.card-1 img {
-    position: relative;
-    border:  double #fafafa;
-    border-radius: 50%;
-    width: 300px;
+/* Conteneur pour les cartes d'animaux */
+.card-animaux {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espace entre les cartes */
+    flex-wrap: wrap; /* Permet de passer à la ligne si trop d'éléments */
+}
+
+/* Style pour chaque image des cartes */
+.card-animaux img {
+    border: double #fafafa;
+    border-radius: 10px;
+    padding: 10px;
+    width: 510px;
     height: auto;
+    background-color: #FFFFFF;
+}
+
+/* Style des paragraphes sous les images */
+.card-animaux p {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin: -18px;
+}
+
+/* Sous-titre et bouton */
+.container-animaux h3 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-top: 45px;
+}
+
+/* Bouton */
+.container-animaux a {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.container-animaux a:hover {
+    background-color: #ff8c00;
 }
 
 .propos {
@@ -314,3 +360,4 @@ body {
 .propos p {
     text-align: center;
 }
+
