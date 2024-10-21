@@ -1,7 +1,3 @@
-/* Import google fonts- inter */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
-
 
 h1 {
     margin: 0;
@@ -84,6 +80,7 @@ body {
 .Container {
     width: 100%;
     height: 250px;
+    margin-bottom: 30px;
 }
 
 .contenaire {
@@ -315,7 +312,7 @@ body {
     border: double #fafafa;
     border-radius: 10px;
     padding: 10px;
-    width: 510px;
+    width: 500px;
     height: auto;
     background-color: #FFFFFF;
 }
@@ -353,11 +350,196 @@ body {
     background-color: #ff8c00;
 }
 
-.propos {
-    margin-top: 500px;
-}
-
-.propos p {
+.service {
+    width: 100%;
+    padding: 50px 0;
     text-align: center;
 }
+
+.service h2 {
+    font-size: 25px;
+    color: #074874;
+    margin-bottom: 30px;
+}
+
+.service p {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.restaurant {
+    border: 2px solid #ff8c00;
+    text-align: center;
+    width: 80%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.restaurant img {
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.restaurant_btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.restaurant_btn:hover {
+    background-color: #ff8c00;
+}
+
+.visite {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid #ff8c00;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.visite img{
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.visite_btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.visite_btn:hover {
+    background-color: #ff8c00;
+}
+
+.carousel {
+    width: 100%;
+    height: 250px;
+    background-color: #074874;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Titre du carrousel */
+.carousel h1 {
+    color: #FFFFFF;
+    font-size: 25px;
+}
+
+/* Sous-titre ou description du carrousel */
+.carousel p {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* Conteneur des avis */
+.carousel-inner {
+    border: 1px solid #ff8c00; /* Garder la bordure orange */
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 30%; /* Largeur fixée */
+    height: 50px; /* Hauteur fixée pour éviter de bouger */
+    color: #FFFFFF;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Conteneur qui englobe les items pour permettre leur défilement */
+.carousel-items-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Avis dans le carrousel */
+.carousel-item {
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute; /* Chaque élément reste en position absolue pour éviter qu'ils déplacent le parent */
+    opacity: 0; /* Masquer tous les éléments par défaut */
+    transition: opacity 0.5s ease;
+    width: 100%; /* Prendre la largeur complète du conteneur parent */
+    text-align: center;
+}
+
+/* Avis actif, visible */
+.carousel-item.active {
+    opacity: 1; /* Afficher uniquement l'élément actif */
+    z-index: 1; /* Mettre l'élément actif au premier plan */
+}
+
+.prev {
+    background-color: #ff8c00;
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.next {
+    background-color: #ff8c00;
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.footer {
+    color: #FFFFFF;
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    height: 250px;
+    text-align: center;
+}
+
+.lien a{
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.lien p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.lien {
+    display: 1;
+    text-align: center;
+    padding: 20px;
+    margin-left: 300px;
+}
+
+.autre {
+    margin-left: 120px;
+    margin-top: 220px;
+}
+
+
 
