@@ -1,0 +1,184 @@
+h1 {
+    margin: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;    /* Centre verticalement */
+}
+
+img {
+    width: 100px; /* Largeur de l'image */
+    height: auto;  /* Hauteur automatique pour garder les proportions */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 12px Arial;
+}
+
+.header {
+    display: flex;
+    background-color: #7f9172;
+    font-weight: bold;
+    height: 90px;
+}
+
+.menu li { 
+    display: flex;
+    float: right;
+    width: 30px;
+    padding: 30px;
+    text-align: center;
+}
+
+.menu li a:link, .menu li a:visited {
+    color: #FFFFFF; 
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.Image_habitat {
+    position: relative;
+    width: 100%;
+}
+
+.Image_habitat img {
+    width: 1903px;
+    height: 500px;
+}
+
+.Image_habitat .titre {
+    position: absolute;
+    top: 50%; /* Place le titre au milieu vertical de l'image */
+    left: 50%; /* Place le titre au milieu horizontal de l'image */
+    transform: translate(-50%, -50%); /* Ajuste pour centrer exactement */
+    color: white; /* Couleur du texte */
+    font-size: 30px; /* Taille du texte */
+    font-weight: bold; /* Style du texte */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Donne un effet d'ombre pour améliorer la lisibilité */
+    text-align: center; /* Centrer le texte */
+}
+
+.habitat-container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    height: 800px;
+    margin-bottom: 50px;
+}
+
+.habitat-card {
+    text-align: center;
+    border: 1px solid #000000;
+    margin: 15px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.habitat-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.habitat-card h2 {
+    font-size: 27px;
+}
+
+.habitat-card p {
+    font-size: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff8c00;
+}
+
+.section-nature {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.section-nature img {
+    width: 450px;
+}
+
+.section-nature h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.section-nature p {
+    text-align: center;
+    font-size: 15px;
+}
+
+.section-conservation {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.section-conservation img {
+    width: 350px;
+}
+
+.section-conservation h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.section-conservation p {
+    text-align: center;
+    font-size: 15px;
+}
+
+.footer {
+    color: #FFFFFF;
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    max-height: 320px;
+    text-align: center;
+}
+
+.lien a{
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.lien p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.lien {
+    display: 1;
+    text-align: center;
+    padding: 20px;
+    margin-left: 300px;
+}
+
+.autre {
+    margin-left: 120px;
+    margin-top: 255px;
+}

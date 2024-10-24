@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     font: 12px Arial;
+    box-sizing: border-box;
 }
 
 .header {
@@ -43,7 +44,7 @@ body {
 .Image_Accueil0 {
     position: relative;
     width: 100%;
-    height: 450px;
+    min-height: 450px;
 }
 
 .Image_Accueil0  img{
