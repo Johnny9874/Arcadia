@@ -1,44 +1,48 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// la connexion à la base de donnée
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "arcadia";
 
-// Vérifiez que la méthode est POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Connexion à la base de données
-    $servername = "localhost"; // Serveur local
-    $username = "root"; // Nom d'utilisateur
-    $password = ""; // Mot de passe
-    $dbname = "arcadia"; // Nom de la base de données
+try {
+    // Essaye de se connecter à la base de données
+    $conn = new PDO("mysql:host=$servername;port=3308;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "La connexion a bien été établie";
+} catch(PDOException $e) {
+    // Affiche un message d'erreur si la connexion échoue
+    echo "La connexion a échoué : " . $e->getMessage();
+    $conn = null; // Définit $conn à null pour éviter d'utiliser une variable non initialisée
+}
 
-    // Créer la connexion
-    $conn = new mysqli($servername, $username, $password, $dbname);
+if (isset($_POST['envoyer'])) {
+    // Vérifiez si la connexion a été établie avant d'exécuter la requête
+    if ($conn) {
+        // Récupération des données du formulaire
+        $nom = $_POST['nom'];
+        $prenom = $_POST['prenom'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
 
-    // Tester la connexion
-    if ($conn->connect_error) {
-        die("Échec de la connexion : " . $conn->connect_error);
-    }
+        // Préparation de la requête SQL
+        $sql = "INSERT INTO `contacts` (`nom`, `prenom`, `email`, `message`) VALUES (:nom, :prenom, :email, :message)";
+        $stmt = $conn->prepare($sql);
 
-    // Préparer et lier
-    $stmt = $conn->prepare("INSERT INTO contacts (nom, prenom, email, message) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $nom, $prenom, $email, $message);
+        // Liaison des paramètres
+        $stmt->bindParam(':nom', $nom);
+        $stmt->bindParam(':prenom', $prenom);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':message', $message);
 
-    // Récupérer les données du formulaire
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    // Exécuter la requête
-    if ($stmt->execute()) {
-        echo "Nouveau message enregistré avec succès.";
+        // Exécution de la requête
+        if ($stmt->execute()) {
+            echo "Les données ont été ajoutées avec succès.";
+        } else {
+            echo "Une erreur est survenue lors de l'ajout des données.";
+        }
     } else {
-        echo "Erreur lors de l'enregistrement : " . $stmt->error;
+        echo "Erreur : Impossible de se connecter à la base de données.";
     }
-
-    // Fermer la connexion
-    $stmt->close();
-    $conn->close();
-} else {
-    echo "Méthode non autorisée.";
 }
 ?>
