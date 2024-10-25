@@ -7,6 +7,81 @@
     <link rel="stylesheet" href="Page_Contact.css">
 </head>
 <body>
+
+    <div class="header">
+        <img src="https://arcadia.kreartion.com/assets/images/logo.png" alt="Logo" class="Logo">
+        <ul class="menu">
+            <li><a href="Page_Connexion.html"><span style="border: 1px solid #ff8c00; border-radius: 50px; background-color: #ff8c00; margin-left: 800px; color: black; padding: 10px;">Connexion</span></a></li>
+            <li><a href="Page_Contact.html">Contact</a></li>
+            <li><a href="Page_Horaire.html">Horaire</a></li>
+            <li><a href="Page_Habitats.html">Habitats</a></li>
+            <li><a href="Page_Service.html">Services</a></li>
+            <li><a href="Page_Principal.html">Accueil</a></li>
+        </ul>
+    </div>
+
+    <div class="container-contact">
+        <div class="container-gauche">
+            <img src="https://fac.img.pmdstatic.net/fit/~1~fac~2023~04~06~a8a46d77-7d95-4a34-b0cc-0fa5be5ac90d.jpeg/1200x1200/quality/80/crop-from/center/focus-point/1896%2C1365/le-macaque-du-dieu-singe-aux-residents-du-rocher-de-gibraltar.jpeg" alt="Image de singe" id="image_contact">
+        </div>
+        <div class="container-droite">
+            <form id="contactForm" action="C:\Users\FLOWUP\Desktop\Dossier VScode\ECF studi\arcadia.php" method="POST">
+
+            <h2>Restons en <span style="color: #ff8c00;">CONTACT</span></h2>
+
+            
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+                <br>
+                <br>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <br>
+                <br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <br>
+                <label for="messages">Message :</label>
+                <br>
+                <textarea name="message" id="message" rows="10" cols="50" required></textarea>
+                <br>
+                <br>
+                <button type="submit">Envoyer</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50885.629868508164!2d4.994167828339651!3d47.910332913384075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2spl!4v1715422819287!5m2!1sfr!2spl" width="100%" height="400px" style="border: 0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            #document (https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50885.629868508164!2d4.994167828339651!3d47.910332913384075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2spl!4v1715422819287!5m2!1sfr!2spl)
+        </iframe>
+    </div>
+
+    <div class="footer">
+        <div class="lien">
+            <h1>Liens Rapide</h1>
+            <p><a href="Page_Principal.html">Accueil</a></p>
+            <p><a href="Page_Habitats.html">Habitats</a></p>
+            <p><a href="Page_Animaux.html">Animaux</a></p>
+            <p><a href="Page_Service.html">Services</a></p>
+            <p><a href="Page_Avis.html">Avis</a></p>
+            <p><a href="Page_Contact.html">Contact</a></p>
+        </div>
+        <div class="lien">
+            <h1>Nous trouver</h1>
+            <p>Arcadia - 123 Rue des Animaux, Paris</p>
+        </div>
+        <div class="lien">
+            <h1>Besoin d'aide ?</h1>
+            <p>info@arcadia.fr</p>
+        </div>
+        <div class="autre">
+            <p>Arcadia</p>
+            <p>Arcadia - Tous droits réservés</p>
+        </div>
+    </div>
     <script src="Page_Contact.js"></script>
 </body>
 </html>
