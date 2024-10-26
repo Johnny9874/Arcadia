@@ -7,7 +7,7 @@ $dbname = "arcadia";
 
 try {
     // Essaye de se connecter à la base de données
-    $conn = new PDO("mysql:host=$servername;port=3308;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysql:host=$servername;port=3306;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "La connexion a bien été établie";
 } catch(PDOException $e) {
@@ -26,7 +26,7 @@ if (isset($_POST['envoyer'])) {
         $message = $_POST['message'];
 
         // Préparation de la requête SQL
-        $sql = "INSERT INTO `contacts` (`nom`, `prenom`, `email`, `message`) VALUES (:nom, :prenom, :email, :message)";
+        $sql = "INSERT INTO `contact` (`nom`, `prenom`, `email`, `message`) VALUES (:nom, :prenom, :email, :message)";
         $stmt = $conn->prepare($sql);
 
         // Liaison des paramètres
