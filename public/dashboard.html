@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dashboard admin</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="/Arcadia/public/dashboard.css">
 </head>
 <body>
-    <h1>Hello world !</h1>
+    <h2 style="text-align: center; color: #FFFF; font-size: 30px;">Créer un compte employé</h2>
+    <form action="/Arcadia/public/php/creer_employe.php" method="post">
+        <input type="text" name="nom" required placeholder="Nom">
+        <input type="text" name="prenom" required placeholder="Prénom">
+        <input type="email" name="email" required placeholder="Email">
+        <input type="password" name="mot_de_passe" required placeholder="Mot de passe">
+        <input type="submit" value="Créer un compte">
+    </form>
+    
+    
+
     <script src="dashboard.js"></script>
 </body>
 </html>
