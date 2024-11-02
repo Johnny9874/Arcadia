@@ -1,0 +1,58 @@
+
+  /* Style global du formulaire */
+  .form-employe {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Style du titre */
+  .form-employe h2 {
+    text-align: center;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Style des labels */
+  .form-employe label {
+    font-size: 0.9rem;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* Style des champs de saisie */
+  .form-employe input[type="text"],
+  .form-employe input[type="email"],
+  .form-employe input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Style du bouton de soumission */
+  .form-employe button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Effet de survol pour le bouton */
+  .form-employe button:hover {
+    background-color: #45a049;
+  }

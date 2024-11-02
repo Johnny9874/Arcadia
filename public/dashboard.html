@@ -7,7 +7,23 @@
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    <h1>Hello world !</h1>
+    <h2 style="text-align: center; color: white;">Créer un compte employé</h2>
+    <form action="php/creer_employe.php" method="POST" class="form-employe">
+  <label for="nom">Nom :</label>
+  <input type="text" id="nom" name="nom" required><br>
+
+  <label for="prenom">Prénom :</label>
+  <input type="text" id="prenom" name="prenom" required><br>
+
+  <label for="email">Email :</label>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="mot_de_passe">Mot de passe :</label>
+  <input type="password" id="mot_de_passe" name="mot_de_passe" required><br>
+
+  <button type="submit">Créer l'employé</button>
+</form>
+
     <script src="dashboard.js"></script>
 </body>
 </html>
