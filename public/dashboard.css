@@ -1,6 +1,6 @@
 
-  /* Style global du formulaire */
-  .form-employe {
+/* Style global du formulaire */
+.form-employe {
     width: 100%;
     max-width: 400px;
     margin: 20px auto;
@@ -10,6 +10,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
 
   /* Style du titre */
   .form-employe h2 {
@@ -56,3 +57,8 @@
   .form-employe button:hover {
     background-color: #45a049;
   }
+
+
+  body {
+    background-color: #7f9172;
+}
