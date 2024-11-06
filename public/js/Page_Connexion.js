@@ -48,9 +48,10 @@ document.addEventListener('DOMContentLoaded', showLoginForm);
 function login(userType) {
     let username, password;
 
+    // Récupération des données du formulaire selon le type d'utilisateur
     if (userType === 'admin') {
-        username = document.getElementById("admin-username").value; // Assurez-vous que l'ID est correct
-        password = document.getElementById("admin-password").value; // Assurez-vous que l'ID est correct
+        username = document.getElementById("admin-username").value; // ID du champ admin
+        password = document.getElementById("admin-password").value; // ID du champ admin
     } else if (userType === 'visitor') {
         username = document.getElementById("username").value;
         password = document.getElementById("password").value;
@@ -59,28 +60,24 @@ function login(userType) {
         password = document.getElementById("employee-password").value;
     }
 
-    fetch('http://localhost/Arcadia/php/login.php', {
+    console.log('Data being sent:', { username, password, userType }); // Pour le debug
+
+    // Envoi de la requête POST avec JSON.stringify() et en-têtes appropriés
+    fetch('http://localhost/Arcadia/public/php/login.php', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'  // Indique que les données envoyées sont en JSON
         },
-        body: JSON.stringify({ username, password, userType }), // userType est déjà en minuscules
+        body: JSON.stringify({
+            username: username,  // Utilisation des valeurs dynamiques
+            password: password,
+            userType: userType,  // Le type d'utilisateur (admin, employé, visiteur)
+        })
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data); // Vérifie la réponse
-        if (data.success) {
-            window.location.href = 'dashboard.html'; // Redirection vers dashboard
-        } else {
-            alert(data.message); // Afficher le message d'erreur
-        }
+        console.log(data);
+        // Traitez la réponse ici
     })
     .catch(error => console.error('Erreur:', error));
 }
-
-
-
-
-
-// Afficher le formulaire par défaut
-document.addEventListener('DOMContentLoaded', showLoginForm);
