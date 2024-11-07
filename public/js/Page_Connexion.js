@@ -48,10 +48,9 @@ document.addEventListener('DOMContentLoaded', showLoginForm);
 function login(userType) {
     let username, password;
 
-    // Récupération des données du formulaire selon le type d'utilisateur
     if (userType === 'admin') {
-        username = document.getElementById("admin-username").value; // ID du champ admin
-        password = document.getElementById("admin-password").value; // ID du champ admin
+        username = document.getElementById("admin-username").value;
+        password = document.getElementById("admin-password").value;
     } else if (userType === 'visitor') {
         username = document.getElementById("username").value;
         password = document.getElementById("password").value;
@@ -60,24 +59,26 @@ function login(userType) {
         password = document.getElementById("employee-password").value;
     }
 
-    console.log('Data being sent:', { username, password, userType }); // Pour le debug
-
-    // Envoi de la requête POST avec JSON.stringify() et en-têtes appropriés
     fetch('http://localhost/Arcadia/public/php/login.php', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'  // Indique que les données envoyées sont en JSON
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            username: username,  // Utilisation des valeurs dynamiques
+            username: username,
             password: password,
-            userType: userType,  // Le type d'utilisateur (admin, employé, visiteur)
+            userType: userType
         })
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data);
-        // Traitez la réponse ici
+        if (data.success) {
+            // Redirection côté client vers la page de l'admin
+            window.location.href = "http://localhost/Arcadia/public/dashboard.html";
+        } else if (data.error) {
+            console.error("Erreur:", data.error);
+            alert(data.error);
+        }
     })
     .catch(error => console.error('Erreur:', error));
 }
