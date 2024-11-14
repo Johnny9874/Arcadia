@@ -39,27 +39,28 @@ function showLoginForm() {
     loginForm.innerHTML = formHtml;
 }
 
-
-
 // Appel initial pour afficher le bon formulaire par défaut
 document.addEventListener('DOMContentLoaded', showLoginForm);
 
-
 function login(userType) {
     let username, password;
+    let url = 'http://localhost/Arcadia/public/php/';
 
     if (userType === 'admin') {
         username = document.getElementById("admin-username").value;
         password = document.getElementById("admin-password").value;
+        url += 'login.php'; // Utilisation de login.php pour l'admin
     } else if (userType === 'visitor') {
         username = document.getElementById("username").value;
         password = document.getElementById("password").value;
+        url += 'login.php'; // Utilisation de login.php pour le visiteur
     } else if (userType === 'employee') {
         username = document.getElementById("employee-username").value;
         password = document.getElementById("employee-password").value;
+        url += 'connexion.php'; // Utilisation de connexion.php pour l'employé
     }
 
-    fetch('http://localhost/Arcadia/public/php/login.php', {
+    fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -73,8 +74,12 @@ function login(userType) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            // Redirection côté client vers la page de l'admin
-            window.location.href = "http://localhost/Arcadia/public/dashboard.html";
+            // Redirection en fonction du type d'utilisateur
+            if (userType === 'admin') {
+                window.location.href = "http://localhost/Arcadia/public/dashboard.html";
+            } else if (userType === 'employee') {
+                window.location.href = "http://localhost/Arcadia/public/Page_Employe.html";
+            }
         } else if (data.error) {
             console.error("Erreur:", data.error);
             alert(data.error);
