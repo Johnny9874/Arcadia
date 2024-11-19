@@ -1,0 +1,547 @@
+
+h1 {
+    margin: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;    /* Centre verticalement */
+}
+
+img {
+    width: 100px; /* Largeur de l'image */
+    height: auto;  /* Hauteur automatique pour garder les proportions */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 12px Arial;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    background-color: #7f9172;
+    font-weight: bold;
+    height: 100px;
+}
+
+.menu li { 
+    display: flex;
+    float: right;
+    width: 30px;
+    padding: 50px;
+    text-align: center;
+}
+
+.menu li a:link, .menu li a:visited {
+    color: #FFFFFF; 
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.Image_Accueil0 {
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+}
+
+.Image_Accueil0  img{
+    width: 100%;
+    height: 450px;
+}
+
+.Bienvenu {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.Arcadia {
+    position: absolute;
+    top: 85px;
+    left: 186px;
+    font-size: 30px;
+    color: #e08e23;
+    font-weight: bold;
+}
+
+.texte_bienvenu {
+    position: absolute;
+    top: 145px;
+    left: 186px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Container {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+.contenaire {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1600px;
+    margin: 0 auto;
+    border: 1px solid #ddd
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    margin-left: 20px;
+    max-width: 450px;
+}
+
+.text-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.text-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff8c00;
+}
+
+.contenaire-1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1600px;
+    margin: 0 auto;
+    border: 1px solid #ddd
+}
+
+.image-container-1 img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-container-1 {
+    margin-left: 20px;
+    max-width: 450px;
+}
+
+.text-container-1 h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.text-container-1 p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff8c00;
+}
+
+.contenaire-2 {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1600px;
+    margin: 0 auto;
+    border: 1px solid #ddd
+}
+
+.image-container-2 img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-container-2 {
+    margin-left: 20px;
+    max-width: 450px;
+}
+
+.text-container-2 h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.text-container-2 p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff8c00;
+}
+
+.Découvrez {
+    position: absolute;
+    left: 750px;
+    font-weight: bold;
+    font-size: 30px;
+    bottom: 300px;
+}
+
+.HABITAT {
+    position: absolute;
+    left: 970px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #e08e23;
+    bottom: 300px;
+}
+
+.Text {
+    position: absolute;
+    font-size: 18px;
+    font-family: system-ui;
+    font-weight: bold;
+    bottom: 230px;
+    left: 480px;
+}
+
+.Découvrez_nos_habitats button{
+    position: absolute;
+    left: 850px;
+    top: 750px;
+    background-color: #e08e23;
+    font-size: 15px;
+    height: 30px;
+    width: 200px;
+    font-weight: bold;
+    border-radius: -20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Conteneur général pour les animaux */
+.container-animaux {
+    background-color: #074874;
+    width: 100%;
+    padding: 50px 0; /* Ajouter du padding pour espacer un peu le contenu */
+    text-align: center;
+}
+
+/* Style du titre des animaux */
+.container-animaux h2 {
+    font-size: 25px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+}
+
+/* Conteneur pour les cartes d'animaux */
+.card-animaux {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espace entre les cartes */
+    flex-wrap: wrap; /* Permet de passer à la ligne si trop d'éléments */
+}
+
+/* Style pour chaque image des cartes */
+.card-animaux img {
+    border: double #fafafa;
+    border-radius: 10px;
+    padding: 10px;
+    width: 500px;
+    height: auto;
+    background-color: #FFFFFF;
+}
+
+/* Style des paragraphes sous les images */
+.card-animaux p {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin: -18px;
+}
+
+/* Sous-titre et bouton */
+.container-animaux h3 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-top: 45px;
+}
+
+/* Bouton */
+.container-animaux a {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.container-animaux a:hover {
+    background-color: #ff8c00;
+}
+
+.service {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.service h2 {
+    font-size: 25px;
+    color: #074874;
+    margin-bottom: 30px;
+}
+
+.service p {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.restaurant {
+    border: 2px solid #ff8c00;
+    text-align: center;
+    width: 80%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.restaurant img {
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.restaurant_btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.restaurant_btn:hover {
+    background-color: #ff8c00;
+}
+
+.visite {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid #ff8c00;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.visite img{
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.visite_btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.visite_btn:hover {
+    background-color: #ff8c00;
+}
+
+.carousel {
+    width: 100%;
+    height: 250px;
+    background-color: #074874;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Titre du carrousel */
+.carousel h1 {
+    color: #FFFFFF;
+    font-size: 25px;
+}
+
+/* Sous-titre ou description du carrousel */
+.carousel p {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* Conteneur des avis */
+.carousel-inner {
+    border: 1px solid #ff8c00; /* Garder la bordure orange */
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 30%; /* Largeur fixée */
+    height: 50px; /* Hauteur fixée pour éviter de bouger */
+    color: #FFFFFF;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Conteneur qui englobe les items pour permettre leur défilement */
+.carousel-items-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Avis dans le carrousel */
+.carousel-item {
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute; /* Chaque élément reste en position absolue pour éviter qu'ils déplacent le parent */
+    opacity: 0; /* Masquer tous les éléments par défaut */
+    transition: opacity 0.5s ease;
+    width: 100%; /* Prendre la largeur complète du conteneur parent */
+    text-align: center;
+}
+
+/* Avis actif, visible */
+.carousel-item.active {
+    opacity: 1; /* Afficher uniquement l'élément actif */
+    z-index: 1; /* Mettre l'élément actif au premier plan */
+}
+
+.prev {
+    background-color: #ff8c00;
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.next {
+    background-color: #ff8c00;
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.footer {
+    color: #FFFFFF;
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    height: 250px;
+    text-align: center;
+}
+
+.lien a{
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.lien p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.lien {
+    display: 1;
+    text-align: center;
+    padding: 20px;
+    margin-left: 300px;
+}
+
+.autre {
+    margin-left: 120px;
+    margin-top: 220px;
+}
+
+
+

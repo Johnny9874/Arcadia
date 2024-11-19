@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Connexion</title>
+    <link rel="stylesheet" href="../css/Page_Connexion.css">
+</head>
+<body>
+    <div id="login-container">
+        <h1 style="display: flex; justify-self: center; color: #e08e23; font-weight: bold;">Connexion</h1>
+        <select id="user-type" onchange="showLoginForm()">
+            <option value="visitor">Visiteur/Utilisateur</option>
+            <option value="admin">Admin</option>
+            <option value="employee">Employé</option>
+        </select>
+        <div id="login-form"></div> <!-- Conteneur pour le formulaire -->
+    </div>
+
+    <script src="../js/Page_Connexion.js"></script>
+</body>
+</html>

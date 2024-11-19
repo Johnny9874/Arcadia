@@ -1,0 +1,136 @@
+h1 {
+    margin: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;    /* Centre verticalement */
+}
+
+img {
+    width: 100px; /* Largeur de l'image */
+    height: auto;  /* Hauteur automatique pour garder les proportions */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 12px Arial;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    background-color: #7f9172;
+    font-weight: bold;
+    height: 100px;
+}
+
+.menu li { 
+    display: flex;
+    float: right;
+    width: 30px;
+    padding: 30px;
+    text-align: center;
+}
+
+.menu li a:link, .menu li a:visited {
+    color: #FFFFFF; 
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.container-koala {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.container-koala img {
+    width: 1905px;
+    height: 400px;
+}
+
+.container-koala h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Ajuste pour que le centre du texte soit au centre de l'image */
+    color: white; /* Couleur du texte, change si nécessaire */
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour améliorer la lisibilité */
+    text-align: center;
+}
+
+.table-container {
+    width: 100%; /* Assure que le conteneur occupe toute la largeur */
+    display: flex;
+    justify-content: center; /* Centre la table dans le conteneur */
+}
+
+.text-horaire {
+    text-align: center;
+    font-size: 15px;
+    margin: 20px;
+}
+
+.horaire-tables {
+    width: 1300px;
+    height: 500px;
+    text-align: center;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.tableau {
+    color: #FFFFFF;
+    background-color: #074874;
+    font-size: 20px;
+}
+
+#horaires-table {
+    color: #074874;
+    font-weight: bold;
+}
+
+tr, td {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.footer {
+    color: #FFFFFF;
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    height: 350px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.lien a{
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.lien p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.lien {
+    display: 1;
+    text-align: center;
+    padding: 20px;
+    margin-left: 300px;
+}
+
+.autre {
+    margin-left: 120px;
+    margin-top: 290px;
+}
