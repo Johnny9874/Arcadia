@@ -14,7 +14,7 @@ function showLoginForm() {
                 <button type="button" onclick="login('visitor')">Se connecter</button>
             </form>
         `;
-    } else if (userType === 'admin') { // Utiliser 'admin' en minuscules
+    } else if (userType === 'admin') {
         formHtml = `
             <form id="admin-form"> 
                 <label for="admin-username">Nom d'utilisateur Admin :</label>
@@ -44,20 +44,17 @@ document.addEventListener('DOMContentLoaded', showLoginForm);
 
 function login(userType) {
     let username, password;
-    let url = 'http://localhost/Arcadia/public/php/';
+    let url = 'http://localhost/Arcadia/public/php/login.php';
 
     if (userType === 'admin') {
         username = document.getElementById("admin-username").value;
         password = document.getElementById("admin-password").value;
-        url += 'login.php'; // Utilisation de login.php pour l'admin
     } else if (userType === 'visitor') {
         username = document.getElementById("username").value;
         password = document.getElementById("password").value;
-        url += 'login.php'; // Utilisation de login.php pour le visiteur
     } else if (userType === 'employee') {
         username = document.getElementById("employee-username").value;
         password = document.getElementById("employee-password").value;
-        url += 'connexion.php'; // Utilisation de connexion.php pour l'employé
     }
 
     fetch(url, {
@@ -71,19 +68,26 @@ function login(userType) {
             userType: userType
         })
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erreur de communication avec le serveur");
+        }
+        return response.json();
+    })
     .then(data => {
         if (data.success) {
             // Redirection en fonction du type d'utilisateur
-            if (userType === 'admin') {
-                window.location.href = "http://localhost/Arcadia/public/dashboard.html";
-            } else if (userType === 'employee') {
-                window.location.href = "http://localhost/Arcadia/public/Page_Employe.html";
+            if (data.userType === 'admin') {
+                window.location.href = "http://localhost/Arcadia/public/html/dashboard.html";
+            } else if (data.userType === 'employee') {
+                window.location.href = "http://localhost/Arcadia/public/html/Page_Employe.html";
             }
-        } else if (data.error) {
-            console.error("Erreur:", data.error);
-            alert(data.error);
+        } else {
+            alert(data.error || "Erreur inconnue");
         }
     })
-    .catch(error => console.error('Erreur:', error));
+    .catch(error => {
+        console.error('Erreur:', error);
+        alert("Une erreur s'est produite, veuillez réessayer.");
+    });
 }

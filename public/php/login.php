@@ -8,9 +8,8 @@ $dbpass = 'AG)pbce]/mAzm5Fg';
 try {
     // Création d'une connexion PDO à la base de données
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $dbuser, $dbpass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Définit le mode d'erreur en tant qu'exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-     // En cas d'erreur de connexion, renvoyer un message d'erreur en JSON et arrêter le script
     echo json_encode(["error" => "Erreur de connexion à la base de données : " . $e->getMessage()]);
     exit();
 }
@@ -18,27 +17,45 @@ try {
 // Définir l'en-tête Content-Type pour indiquer que la réponse est au format JSON
 header("Content-Type: application/json");
 
-// Vérifier que la méthode de requête est POST, car les identifiants sont envoyés via une requête POST
+// Vérifier que la méthode de requête est POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Décoder le JSON reçu dans le corps de la requête pour obtenir les données de connexion
+    // Décoder le JSON reçu
     $data = json_decode(file_get_contents("php://input"), true);
     $username = $data['username'];
     $password = $data['password'];
+    $userType = $data['userType'];
 
     // Vérifier que les champs utilisateur et mot de passe ne sont pas vides
-    if ($username != "" && $password != "") {
-        // Préparer une requête pour rechercher l'utilisateur dans la base de données
-        $req = $pdo->prepare("SELECT * FROM administrators WHERE username = :username");
+    if (!empty($username) && !empty($password)) {
+        if ($userType === 'admin') {
+            // Recherche dans la table administrators
+            $req = $pdo->prepare("SELECT * FROM administrators WHERE username = :username");
+        } elseif ($userType === 'employee') {
+            // Recherche dans la table employees
+            $req = $pdo->prepare("SELECT * FROM employees WHERE username = :username");
+        } else {
+            echo json_encode(["error" => "Type d'utilisateur invalide"]);
+            exit();
+        }
+
         $req->execute(['username' => $username]);
         $rep = $req->fetch();
 
-        // Vérifier que l'utilisateur existe et que le mot de passe est correct
         if ($rep && password_verify($password, $rep['password'])) {
-            // Si la connexion est réussie, renvoyer un message de succès en JSON
-            echo json_encode(["success" => "Connexion réussie"]);
+            // Connexion réussie
+            echo json_encode([
+                "success" => true,
+                "userType" => $userType
+            ]);
         } else {
-            // Si les identifiants sont incorrects, renvoyer un message d'erreur en JSON
+            // Identifiants incorrects
             echo json_encode(["error" => "Nom d'utilisateur ou mot de passe incorrect"]);
         }
+    } else {
+        echo json_encode(["error" => "Les champs utilisateur et mot de passe sont obligatoires"]);
     }
+} else {
+    echo json_encode(["error" => "Méthode non autorisée"]);
 }
+?>
+

@@ -56,20 +56,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérification des données du formulaire
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nom = htmlspecialchars(trim($_POST['nom']));
-        $prenom = htmlspecialchars(trim($_POST['prenom']));
+        $username = htmlspecialchars(trim($_POST['username']));
         $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
-        $mot_de_passe = password_hash(trim($_POST['mot_de_passe']), PASSWORD_DEFAULT);
+        $password = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
 
         // Insertion dans la table employé
-        $sql = "INSERT INTO employe (nom, prenom, email, mot_de_passe) VALUES (:nom, :prenom, :email, :mot_de_passe)";
+        $sql = "INSERT INTO employé (nom, username, email, password) VALUES (:nom, :username, :email, :password)";
         $stmt = $pdo->prepare($sql);
 
         try {
             $stmt->execute([
                 ':nom' => $nom,
-                ':prenom' => $prenom,
+                ':username' => $username,
                 ':email' => $email,
-                ':mot_de_passe' => $mot_de_passe
+                ':password' => $password
             ]);
             echo "Compte employé créé avec succès.";
         } catch (PDOException $e) {
