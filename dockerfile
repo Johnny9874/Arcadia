@@ -1,14 +1,20 @@
-# Utiliser l'image PHP avec Apache
-FROM php:8.1-apache
+FROM node:16
 
-# Copier les fichiers de l'application
-COPY . /var/www/html/
+# Définir le répertoire de travail dans le conteneur
+WORKDIR /usr/src/app
 
-# Installer les extensions PHP nécessaires (par exemple : mysqli pour MySQL)
-RUN docker-php-ext-install mysqli
+# Copier les fichiers package.json et package-lock.json dans le conteneur
+COPY package*.json ./
 
-# Exposer le port 80
-EXPOSE 80
+# Installer les dépendances
+RUN npm install
 
-# Commande pour démarrer le serveur Apache
-CMD ["apache2-foreground"]
+# Copier tout le projet dans le conteneur
+COPY . .
+
+# Exposer le port 3000
+EXPOSE 3000
+
+# Lancer l'application
+CMD ["node", "app.js"]
+
