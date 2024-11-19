@@ -27,6 +27,3 @@ Arcadia/app.js : Configure l'application
 J'ai configuré PostgreSQL pour les données relationnelles et structurées en créant la base de donnée en utilisant CREATE DATABASE 'arcadia'.<br>
 
 Enfin, j'ai initialisé un dépôt Git à la racine du projet avec la commande git init. Cela me permet de suivre les modifications du code source. J'ai également connecté mon dépôt local à un dépôt distant sur GitHub en utilisant des commandes comme git remote add origin et git push -u origin main.
-
-
-
