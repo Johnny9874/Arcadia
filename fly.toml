@@ -1,16 +1,30 @@
+# fly.toml app configuration file generated for arcadia-purple-shape-7198 on 2024-11-20T00:36:51+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "arcadia"
+primary_region = "cdg"
+
+[build]
+
 [http_service]
   internal_port = 3000
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
-  processes = ['app']
+  processes = ["app"]
 
 [[services]]
-  protocol = 'tcp'
+  protocol = "tcp"
   internal_port = 3000
 
   [[services.ports]]
     port = 80
-    handlers = ['http']
+    handlers = ["http"]
 
+[[vm]]
+  memory = "1gb"
+  cpu_kind = "shared"
+  cpus = 1
