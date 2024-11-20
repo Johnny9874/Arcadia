@@ -59,7 +59,7 @@ app.get('/', (req, res) => {
 
 // Route pour afficher la page de connexion
 app.get('/Page_principal.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'Page_principal.html'));
+    res.sendFile(path.join(__dirname, 'public', 'html', 'Page_principal.html'));
 });
 
 // Route protégée pour l'administrateur
