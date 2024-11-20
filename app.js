@@ -87,11 +87,6 @@ app.get('/Page_Connexion.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'Page_Connexion.html'));
 });
 
-// Route pour afficher la page "Page_Service.html"
-app.get('/arcadia.php', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'php', 'arcadia.php'));
-});
-
 
 // Route protégée pour l'administrateur
 app.get('/admin/dashboard', checkAuth, (req, res) => {
