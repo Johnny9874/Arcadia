@@ -53,13 +53,13 @@ app.post('/login', (req, res) => {
 
 // Route pour la racine
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'html', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'html', 'Page_principal.html'));
 });
 
 
 // Route pour afficher la page de connexion
-app.get('/Page_Connexion.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'Page_Connexion.html'));
+app.get('/Page_principal.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'Page_principal.html'));
 });
 
 // Route protégée pour l'administrateur
