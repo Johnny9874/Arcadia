@@ -57,9 +57,34 @@ app.get('/', (req, res) => {
 });
 
 
-// Route pour afficher la page de connexion
+// Route pour afficher la page principale
 app.get('/Page_principal.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'Page_principal.html'));
+});
+
+// Route pour afficher la page "Page_Service.html"
+app.get('/Page_Service.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'Page_Service.html'));
+});
+
+// Route pour afficher la page "Page_Habitat.html"
+app.get('/Page_habitats.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'Page_habitats.html'));
+});
+
+// Route pour afficher la page "Page_Horaire.html"
+app.get('/Page_Horaire.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'Page_Horaire.html'));
+});
+
+// Route pour afficher la page "Page_Contact.html"
+app.get('/Page_Contact.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'Page_Contact.html'));
+});
+
+// Route pour afficher la page "Page_Connexion.html"
+app.get('/Page_Connexion.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'Page_Connexion.html'));
 });
 
 // Route protégée pour l'administrateur
